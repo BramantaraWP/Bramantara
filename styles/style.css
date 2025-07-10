@@ -1,0 +1,96 @@
+body {
+  background: black;
+  color: white;
+  font-size: auto;
+  font-family: roboto;
+  background: linear-gradient(to top left, #3e22a3, black, black, black);
+}
+
+header {
+  background: none;
+  border-bottom: 1px solid white;
+  padding: 8px;
+  margin: -10px;
+}
+
+  .cloudimage {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    background: none;
+    margin-top: 140px;
+    backdrop-filter: blur(65px);
+    border: 6px solid white;
+  }
+  
+  .content {
+    height: 100%;
+    width: 100%;
+    margin-top: -40px;
+    font-size: 30px;
+  }
+
+  .tops {
+    display: flex;
+  }
+  
+  .h33 {
+    margin-top: 0px;
+    width: 100%;
+  }
+
+@media only screen and (min-width: 400px) {
+  .icon {
+    width: 100%;
+    align-items: end;
+    text-align: end;
+    justify-content: end;
+    float: right;
+    position: absolute;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .icon {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    float: middle;
+    position: absolute;
+  }
+  
+  .cloudimage {
+    border-radius: 50%;
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    background: none;
+    margin-top: 40px;
+    margin-left: 380px;
+    backdrop-filter: blur(65px);
+    border: 6px solid white;
+  }
+}
+
+.for {
+  width:100%;
+  align-items: center;
+  text-align: center;
+}
+
+button {
+  transition: 0.8s;
+  background: linear-gradient(to left, #13a195, darkviolet);
+  padding: 2px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0px 5px 0px 5px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
