@@ -91,6 +91,7 @@ button {
   background: linear-gradient(to left, #13a195, darkviolet);
   padding: 2px;
   color: white;
+  width: 300px;
   border: none;
   border-radius: 8px;
   padding: 0px 5px 0px 5px;
