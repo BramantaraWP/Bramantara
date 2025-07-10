@@ -1,9 +1,12 @@
+html {
+  background: linear-gradient(to top left, #3e22a3, black, black, black);
+}
+
 body {
-  background: black;
+  background: none;
   color: white;
   font-size: auto;
   font-family: roboto;
-  background: linear-gradient(to top left, #3e22a3, black, black, black);
 }
 
 header {
@@ -63,14 +66,18 @@ header {
   
   .cloudimage {
     border-radius: 50%;
-    width: 230px;
-    height: 230px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     background: none;
-    margin-top: 40px;
+    margin-top: 60px;
     margin-left: 380px;
     backdrop-filter: blur(65px);
     border: 6px solid white;
+  }
+  
+  .content {
+    font-size: 40px;
   }
 }
 
