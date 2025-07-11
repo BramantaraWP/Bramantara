@@ -36,6 +36,7 @@
 
 html {
   animation: aacb 5s infinite;
+  transition: 2s;
   height: 100%;
   background-repeat: no-repeat;
   background: linear-gradient(to top left, #3e22a3, black, black, black);
