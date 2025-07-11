@@ -130,11 +130,10 @@ button:hover {
 
 @keyframes updown {
   0%    { transform: scale(1.1); }
-  25%   { transform: scale(1.0); }
-  75%   { transform: scale(1.1); }
+  50%   { transform: scale(1.0); }
   100%  { transform: scale(1.0); }
 }
 
 .cloudimage {
-  animation: updown 1.2s infinite;
+  animation: updown 2s infinite;
 }
