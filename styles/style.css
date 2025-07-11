@@ -1,4 +1,41 @@
+@keyframes aacb {
+  0% {
+    background-image: linear-gradient(135deg, #4B0082, #8A2BE2);
+  }
+  10% {
+    background-image: linear-gradient(135deg, #8A2BE2, #9370DB);
+  }
+  20% {
+    background-image: linear-gradient(135deg, #9370DB, #7B68EE);
+  }
+  30% {
+    background-image: linear-gradient(135deg, #7B68EE, #6A5ACD);
+  }
+  40% {
+    background-image: linear-gradient(135deg, #6A5ACD, #483D8B);
+  }
+  50% {
+    background-image: linear-gradient(135deg, #483D8B, #4B0082);
+  }
+  60% {
+    background-image: linear-gradient(135deg, #4B0082, #8A2BE2);
+  }
+  70% {
+    background-image: linear-gradient(135deg, #8A2BE2, #9370DB);
+  }
+  80% {
+    background-image: linear-gradient(135deg, #9370DB, #7B68EE);
+  }
+  90% {
+    background-image: linear-gradient(135deg, #7B68EE, #6A5ACD);
+  }
+  100% {
+    background-image: linear-gradient(135deg, #6A5ACD, #483D8B);
+  }
+}
+
 html {
+  animation: aacb 4s infinite alternate;
   height: 100%;
   background-repeat: no-repeat;
   background: linear-gradient(to top left, #3e22a3, black, black, black);
