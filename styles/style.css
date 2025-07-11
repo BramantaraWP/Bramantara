@@ -59,8 +59,8 @@ header {
 
 @media only screen and (min-width: 600px) {
   .h33 {
-    margin-top: 0px;
-    margin-left: 400px;
+    margin-top: 30px;
+    margin-left: 200px;
     width: 100%;
   }
   
@@ -82,12 +82,12 @@ header {
   
   .cloudimage {
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     object-fit: cover;
     background: none;
-    margin-top: 160px;
-    margin-left: 350px;
+    margin-top: 150px;
+    margin-left: 370px;
     backdrop-filter: blur(65px);
     border: 6px solid white;
   }
