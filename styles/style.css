@@ -1,45 +1,20 @@
-@keyframes aacb {
-  0% {
-    background-image: linear-gradient(to bottom left, black, black, #4B0082);
-  }
-  10% {
-    background-image: linear-gradient(to bottom right, black, black, #8A2BE2);
-  }
-  20% {
-    background-image: linear-gradient(to top left, black, black, #9370DB);
-  }
-  30% {
-    background-image: linear-gradient(to top right, black, black, #7B68EE);
-  }
-  40% {
-    background-image: linear-gradient(to bottom, black, black, #6A5ACD);
-  }
-  50% {
-    background-image: linear-gradient(to top, black, black, #483D8B);
-  }
-  60% {
-    background-image: linear-gradient(to right, black, black, #4B0082);
-  }
-  70% {
-    background-image: linear-gradient(to left, black, black, #8A2BE2);
-  }
-  80% {
-    background-image: linear-gradient(135deg, black, black, #9370DB);
-  }
-  90% {
-    background-image: linear-gradient(45deg, black, black, #7B68EE);
-  }
-  100% {
-    background-image: linear-gradient(90deg, black, black, #6A5ACD);
-  }
+html {
+  height: 100%;
+  background: linear-gradient(135deg, #3e22a3, black, black, #4B0082);
+  background-size: 600% 600%;
+  animation: aacb 30s ease-in-out infinite;
 }
 
-html {
-  animation: aacb 12s infinite alternate ease-in-out;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: 400% 400%;
-  background: linear-gradient(to top left, #3e22a3, black, black, black);
+@keyframes aacb {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 body {
