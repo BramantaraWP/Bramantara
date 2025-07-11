@@ -171,6 +171,6 @@ button:hover {
   100%  { transform: scale(1.1); }
 }
 
-.cloudimage {
-  animation: updown 3.3s infinite;
+.button {
+  animation: updown 3.8s infinite ease-in-out;
 }
