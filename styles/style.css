@@ -35,10 +35,10 @@
 }
 
 html {
-  animation: aacb 5s infinite;
-  transition: 2s;
+  animation: aacb 12s infinite alternate ease-in-out;
   height: 100%;
   background-repeat: no-repeat;
+  background-size: 400% 400%;
   background: linear-gradient(to top left, #3e22a3, black, black, black);
 }
 
