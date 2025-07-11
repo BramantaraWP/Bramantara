@@ -81,7 +81,7 @@ header {
     object-fit: cover;
     background: none;
     margin-top: 160px;
-    margin-left: 180px;
+    margin-left: 100px;
     backdrop-filter: blur(65px);
     border: 6px solid white;
   }
