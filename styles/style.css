@@ -127,3 +127,13 @@ button:hover {
 .stype {
   animation: cals 2s steps(1, end) infinite;
 }
+
+@keyframe updown {
+  0%    { margin-top: -10px; }
+  50%   { margin-top: 0px;   }
+  100%  { margin-top: 10px;  }
+}
+
+.cloudimage {
+  animation: updown 5s infinite;
+}
