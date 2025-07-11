@@ -171,6 +171,6 @@ button:hover {
   100%  { transform: scale(1.1); }
 }
 
-.button {
+button {
   animation: updown 3.8s infinite ease-in-out;
 }
