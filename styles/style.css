@@ -1,6 +1,6 @@
 html {
   height: 100%;
-  background: linear-gradient(to top left, blue, black, black);
+  background: linear-gradient(to top left, blue, black, black, black);
   background-size: cover;
 }
 
