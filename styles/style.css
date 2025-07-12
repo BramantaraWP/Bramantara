@@ -9,13 +9,13 @@ html {
     black,
     black, 
     black,
-    black, 
-    black,
-    black,
-    black,
-    black,
-    black,
     darkviolet, 
+    black,
+    black,
+    black,
+    black,
+    black,
+    black, 
     black,
     black,
     black,
@@ -28,7 +28,7 @@ html {
     black
   );
   background-size: 800% 800%;
-  animation: aacb 10s ease-in-out infinite;
+  animation: aacb 40s ease-in-out infinite;
 }
 
 @keyframes aacb {
