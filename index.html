@@ -33,6 +33,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <style>
+.num {
+	font-size: 10px;
+}
+
 :root{
   --bg:#0d1117;
   --card-bg:rgba(22,27,34,.55);
@@ -163,16 +167,16 @@ h1{font-size:1.6rem;font-weight:700;margin-bottom:.2rem;color:var(--text)}
     <div><i class="fas fa-exclamation-circle"></i> Issues: 0</div>
     <div><i class="fas fa-code-branch"></i> Contributed to (last year): 0</div>
   </div>
-  <!-- Tambah di dalam .card, setelah footer -->
-<div class="section">Duco Stats</div>
+  <!-- Tambah di dalam .card, setelah footer --><br>
+<div class="section"><h3>My Crypto Duco Stats</h3></div>
 <div class="stats">
   <div class="stat">
-    <div class="num" id="ducoBalance">0</div>
-    <div class="label">DUCO Balance</div>
+    <div class="num" style="font-size: 13px;" id="ducoBalance">0</div>
+    <div class="label" >DUCO Balance</div>
   </div>
   <div class="stat">
     <div class="num" id="ducoUSD">$0.00</div>
-    <div class="label">USD Value</div>
+    <div class="label">IDR Currency</div>
   </div>
 </div>
 
@@ -204,7 +208,7 @@ document.querySelectorAll('.stat .num').forEach(el=>{
   requestAnimationFrame(step);
 });
 </script>
-  <script>
+<script>
 async function loadDucoStats() {
   const username = "bramantara";
 
@@ -223,8 +227,8 @@ async function loadDucoStats() {
     const usdValue = (balance * ducoPrice).toFixed(6);
 
     // Tampilkan ke card
-    document.getElementById("ducoBalance").textContent = balance.toFixed(2);
-    document.getElementById("ducoUSD").textContent = "$128";
+    document.getElementById("ducoBalance").textContent = balance.toFixed(12);
+    document.getElementById("ducoUSD").textContent = "Rp" + (4.04 * balance).toFixed(0);
 
     // Chart animasi dari 0 → balance
     const ctx = document.getElementById("ducoChart").getContext("2d");
@@ -257,7 +261,11 @@ async function loadDucoStats() {
   }
 }
 
+// Jalankan pertama kali
 loadDucoStats();
+
+// Update setiap 1000ms
+setInterval(loadDucoStats, 500);
 </script>
 </body>
 </html>
