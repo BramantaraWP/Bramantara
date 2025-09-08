@@ -227,7 +227,7 @@ async function loadDucoStats() {
     const usdValue = (balance * ducoPrice).toFixed(6);
 
     // Tampilkan ke card
-    document.getElementById("ducoBalance").textContent = balance.toFixed(12);
+    document.getElementById("ducoBalance").textContent = balance.toFixed(18);
     document.getElementById("ducoUSD").textContent = "Rp" + (4.04 * balance).toFixed(0);
 
     // Chart animasi dari 0 → balance
