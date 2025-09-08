@@ -174,7 +174,7 @@ h1{font-size:1.6rem;font-weight:700;margin-bottom:.2rem;color:var(--text)}
     <div class="num" style="font-size: 13px;" id="ducoBalance">0</div>
     <div class="label" >DUCO Balance</div>
   </div>
-  <div class="stat" style="display: none;">
+  <div class="stat">
     <div class="num" id="ducoUSD">$0.00</div>
     <div class="label">IDR Currency</div>
   </div>
@@ -227,7 +227,7 @@ async function loadDucoStats() {
     const usdValue = (balance * ducoPrice).toFixed(6);
 
     // Tampilkan ke card
-    document.getElementById("ducoBalance").textContent = balance.toFixed(23);
+    document.getElementById("ducoBalance").textContent = balance.toFixed(5);
     document.getElementById("ducoUSD").textContent = "Rp" + (4.04 * balance).toFixed(0);
 
     // Chart animasi dari 0 → balance
