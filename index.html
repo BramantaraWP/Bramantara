@@ -3,6 +3,8 @@
 <head>
 <!-- Meta dasar -->
 <meta charset="UTF-8">
+  <!-- Tambah di head -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -161,6 +163,21 @@ h1{font-size:1.6rem;font-weight:700;margin-bottom:.2rem;color:var(--text)}
     <div><i class="fas fa-exclamation-circle"></i> Issues: 0</div>
     <div><i class="fas fa-code-branch"></i> Contributed to (last year): 0</div>
   </div>
+  <!-- Tambah di dalam .card, setelah footer -->
+<div class="section">Duco Stats</div>
+<div class="stats">
+  <div class="stat">
+    <div class="num" id="ducoBalance">0</div>
+    <div class="label">DUCO Balance</div>
+  </div>
+  <div class="stat">
+    <div class="num" id="ducoUSD">$0.00</div>
+    <div class="label">USD Value</div>
+  </div>
+</div>
+
+<canvas id="ducoChart" width="300" height="200"
+  style="margin-top:1rem; background:rgba(255,255,255,.03);border-radius:12px;padding:10px"></canvas>
 </div>
 
 <script>
@@ -176,7 +193,7 @@ btn.addEventListener('click', ()=>{
 /* ---------- Counting animation ---------- */
 document.querySelectorAll('.stat .num').forEach(el=>{
   const target = +el.dataset.target;
-  const duration = 1200;
+  const duration = 500;
   let start = 0;
   const step = t => {
     if(!start) start = t;
@@ -186,6 +203,61 @@ document.querySelectorAll('.stat .num').forEach(el=>{
   };
   requestAnimationFrame(step);
 });
+</script>
+  <script>
+async function loadDucoStats() {
+  const username = "bramantara";
+
+  try {
+    // Ambil data user
+    const resUser = await fetch(`https://server.duinocoin.com/users/${username}`);
+    const dataUser = await resUser.json();
+    const balance = parseFloat(dataUser.result.balance.balance);
+
+    // Ambil harga DUCO di USD
+    const resPrice = await fetch("https://server.duinocoin.com/api.json");
+    const dataPrice = await resPrice.json();
+    const ducoPrice = parseFloat(dataPrice.DucoPrice);
+
+    // Hitung nilai USD
+    const usdValue = (balance * ducoPrice).toFixed(6);
+
+    // Tampilkan ke card
+    document.getElementById("ducoBalance").textContent = balance.toFixed(2);
+    document.getElementById("ducoUSD").textContent = "$128";
+
+    // Chart animasi dari 0 → balance
+    const ctx = document.getElementById("ducoChart").getContext("2d");
+    new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: Array.from({length: balance+1}, (_,i)=>i),
+        datasets: [{
+          label: "Bramantara Duco",
+          data: Array.from({length: balance+1}, (_,i)=>i),
+          borderColor: "yellow",
+          backgroundColor: "rgba(88,166,255,0.15)",
+          tension: 0.25
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { labels: { color: "#adbac7" } }
+        },
+        scales: {
+          x: { ticks: { color: "#adbac7" } },
+          y: { ticks: { color: "#adbac7" } }
+        }
+      }
+    });
+
+  } catch (err) {
+    console.error("Gagal ambil data DUCO:", err);
+  }
+}
+
+loadDucoStats();
 </script>
 </body>
 </html>
